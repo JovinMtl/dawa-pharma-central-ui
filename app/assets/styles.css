@@ -1,4 +1,9 @@
 
+body{
+    background-color: rgb(41, 148, 134);
+    padding: 0;
+    margin: 0;
+}
 .fl{
     display: flex;
 }

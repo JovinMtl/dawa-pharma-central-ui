@@ -1,5 +1,5 @@
 <template>
-    <main class="fl fl-c">
+    <main class="fl fl-c p-5">
         <div class="ta-c">
             <span class="sen ">
                 <span class="color-title">
