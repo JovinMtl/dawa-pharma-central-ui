@@ -8,7 +8,7 @@
                 <span class="c-b">Pharmacie Ubuzima</span> .
             </span>
              <br>
-            <input class="m-v-5 p-5 ta-c bdr-8" placeholder="ex: paracetamol" /> <br>
+            <input class="m-v-5 p-5 ta-c bdr-5" placeholder="ex: paracetamol, ..." /> <br>
             <button>Rechercher</button>
         </div>
     </main>
