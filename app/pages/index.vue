@@ -8,7 +8,7 @@
                 <span class="c-b">Pharmacie Ubuzima</span> .
             </span>
              <br>
-            <input class="m-v-5 p-5 ta-c" placeholder="ex: paracetamol" /> <br>
+            <input class="m-v-5 p-5 ta-c bdr-8" placeholder="ex: paracetamol" /> <br>
             <button>Rechercher</button>
         </div>
     </main>
@@ -23,6 +23,11 @@ useHead({
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap'
     }
+  ],
+  title: 'Pharmacie Ubuzima - Recherchez les médicaments disponibles - Kamenge, Bujumbura, Burundi',
+  meta: [
+    { name: 'description', content: 'Trouvez facilement les médicaments en stock à la Pharmacie Ubuzima. #medicament #sante #Kamenge #Bujumbura #Burundi' },
+    { name: 'robots', content: 'index, follow' },
   ]
 })
 

@@ -5,4 +5,14 @@ export default defineNuxtConfig({
   css: [
     './assets/styles.css'
   ],
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'fr'
+      },
+      meta: [
+        { name: 'google-site-verification', content: '21e720cec2261f05' }
+      ]
+    }
+  }
 })

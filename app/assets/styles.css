@@ -1,6 +1,7 @@
 
 body{
     background-color: rgb(41, 148, 134);
+    /* background-color: rgb(25, 138, 182); */
     padding: 0;
     margin: 0;
 }
@@ -18,6 +19,12 @@ body{
 }
 .p-5{
     padding: 5px;
+}
+.bdr-8{
+    border-radius: 8px;
+}
+.bkg-0{
+    background-color: transparent;
 }
 .c-r{
     color: red;
