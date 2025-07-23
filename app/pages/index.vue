@@ -1,19 +1,22 @@
 <template>
-    <main class="fl fl-c p-5">
-        <div class="ta-c">
+    <main class="pge-setup fl fl-c p-5">
+        <jove-loader v-if="showLoader"></jove-loader>
+        <div class="ta-c pge-2-set">
             <h1 class="sen ">
                 <span class="color-title">
                     Rechercher le médicament disponible dans la 
                 </span>
-                <span class="c-b">Pharmacie Ubuzima</span> .
+                <!-- <span class="c-b">Pharmacie Ubuzima</span> . -->
             </h1>
             <input class="m-5 p-5 ta-c bdr-5" placeholder="ex: paracetamol, ..." /> <br>
-            <button class="m-5">Rechercher</button>
+            <button class="m-5" @click="searchF">Rechercher</button>
         </div>
     </main>
 </template>
 
 <script setup lang="ts">
+const showLoader = ref(false)
+
 useHead({
   link: [
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -30,8 +33,23 @@ useHead({
   ]
 })
 
+// Functions
+const searchF = ()=>{
+  showLoader.value = true;
+  setTimeout(()=>{
+    showLoader.value = false
+  }, 3000)
+}
 </script>
 <style scoped>
+.pge-setup{
+  width: 100%;
+  height: 95vh;
+}
+.pge-2-set{
+  width: 100%;
+  height: 95vh;
+}
 .sen{
     font-family: Sen;
 }
