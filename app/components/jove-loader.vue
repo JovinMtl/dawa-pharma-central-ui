@@ -27,7 +27,7 @@
     background-color: white;
     box-shadow: 0 0 25px rgb(105, 103, 103);
     top: 40%;
-    left: 45%;
+    /* left: 45%; */
     /* transform: translate(300%, 100%); */
 }
 .line1{
