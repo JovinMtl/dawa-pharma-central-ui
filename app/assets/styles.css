@@ -2,6 +2,12 @@
 .fl{
     display: flex;
 }
+.fl-c{
+    justify-content: center;
+}
+.ta-c{
+    text-align: center;
+}
 .c-r{
     color: red;
 }
