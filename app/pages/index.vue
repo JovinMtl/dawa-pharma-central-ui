@@ -1,15 +1,14 @@
 <template>
     <main class="fl fl-c p-5">
         <div class="ta-c">
-            <span class="sen ">
+            <h1 class="sen ">
                 <span class="color-title">
                     Rechercher le médicament disponible dans la 
                 </span>
                 <span class="c-b">Pharmacie Ubuzima</span> .
-            </span>
-             <br>
-            <input class="m-v-5 p-5 ta-c bdr-5" placeholder="ex: paracetamol, ..." /> <br>
-            <button>Rechercher</button>
+            </h1>
+            <input class="m-5 p-5 ta-c bdr-5" placeholder="ex: paracetamol, ..." /> <br>
+            <button class="m-5">Rechercher</button>
         </div>
     </main>
 </template>
