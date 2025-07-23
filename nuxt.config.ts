@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         lang: 'fr'
       },
       meta: [
-        { name: 'google-site-verification', content: '21e720cec2261f05' }
+        { name: 'google-site-verification', content: 'JB8fK2YOdlu2seSRj8XJ_VuyZ0WsqdlH0d1bHd8rZsE' },
       ]
     }
   }

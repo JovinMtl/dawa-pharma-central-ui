@@ -1024,7 +1024,7 @@ const _OCW0kdSFv93WgLGrfR97TJMVb4cpJq43YGHWQJjOw = (function(nitro) {
 
 const rootDir = "/home/muteule/Coding/dawa-pharma-central-ui";
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"google-site-verification","content":"21e720cec2261f05"}],"link":[],"style":[],"script":[],"noscript":[],"htmlAttrs":{"lang":"fr"}};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"google-site-verification","content":"JB8fK2YOdlu2seSRj8XJ_VuyZ0WsqdlH0d1bHd8rZsE"}],"link":[],"style":[],"script":[],"noscript":[],"htmlAttrs":{"lang":"fr"}};
 
 const appRootTag = "div";
 
