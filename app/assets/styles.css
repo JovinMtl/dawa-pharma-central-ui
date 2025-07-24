@@ -35,6 +35,9 @@ body{
 .c-w{
     color: wheat;
 }
+.sm-l{
+    size: 0.5rem;
+}
 .bg-g1{
     background-color: rgb(59, 153, 59);
 }

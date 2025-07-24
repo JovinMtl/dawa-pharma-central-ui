@@ -8,7 +8,9 @@
             </span>
             <span class="c-b">Pharmacie Ubuzima</span> .
         </h1>
-        <input v-model="queryset.query" class="m-5 p-5 ta-c bdr-5" placeholder="ex: paracetamol, ..." /> <br>
+        <input v-model="queryset.query" class="m-5 p-5 ta-c bdr-5" placeholder="ex: paracetamol, ..." /> 
+        <span v-show="shortQuery" for="" class="c-r sm-l">Tapez au moins trois lettres</span>
+        <br>
         <button class="m-5" @click="getFirstPage">Rechercher</button>
         <div class="sen" v-for="(umuti, index) in imiti" :key="index">
           <div class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'">
@@ -42,6 +44,7 @@ const queryset = reactive({
 })
 const page = ref(1)
 const maxPage = ref(1)
+const shortQuery = ref(false)
 
 const url_get_pharmas = 'api/gOps/get_pharmas/'
 const [responsePharmas, getPharmas] =useGetRequest(url_get_pharmas)
@@ -82,6 +85,13 @@ const getSpePage = ()=>{}
 const getFirstPage = ()=>{
   // should receive: 
   // number of pages; pageNumber; the results
+  if (String(queryset.query).length < 3){
+    shortQuery.value = true;
+    setTimeout(()=>{
+      shortQuery.value = false;
+    }, 3000)
+    return
+  }
   console.log("sending queryset")
   queryset.page = 1;
   sendPostRequest();
