@@ -89,6 +89,7 @@ const getSpePage = ()=>{}
 const getFirstPage = ()=>{
   // should receive: 
   // number of pages; pageNumber; the results
+
   if (String(queryset.query).length < 3){
     shortQuery.value = true;
     setTimeout(()=>{
@@ -96,17 +97,21 @@ const getFirstPage = ()=>{
     }, 3000)
     return
   }
+
+  showLoader.value = true;
   console.log("sending queryset")
   queryset.page = 1;
   sendPostRequest();
 }
 const getPrevPage = ()=>{
   if(queryset.page >= 2){
+    showLoader.value = true;
     queryset.page -= 1;
     sendPostRequest();
   }
 }
 const getNextPage = ()=>{
+  showLoader.value = true;
   queryset.page += 1;
   sendPostRequest()
 }
@@ -120,6 +125,7 @@ const searchF = ()=>{
 //Watchers
 watch(responseQuery, (value)=>{
   if(value?.response){
+    showLoader.value = false;
     imiti.value = value?.response;
     page.value = value?.page;
     maxPage.value = value?.max_page;
