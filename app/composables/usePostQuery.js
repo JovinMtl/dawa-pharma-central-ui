@@ -7,17 +7,21 @@ export const usePostRequest = (url, dataToSend)=>{
     const data = ref(null)
     const makePost = async ()=>{
         try{
-            const responsePost = await fetch(url, {
+            const responsePost = await fetch(remoteURL + url, {
                 'method': 'POST',
-                'headers': 'json/application',
-                'body': JSON.stringify(dataToSend)
+                headers: {
+                    "Content-type": "application/json",
+                },
+                'body': JSON.stringify({
+                    'query': dataToSend
+                })
             })
             data.value = await responsePost.json()
             if (responsePost.ok){
                 
             }
         }catch{
-            console.log("Error happened in Get request.")
+            console.log("Error happened in Post request.")
         }
         
     }

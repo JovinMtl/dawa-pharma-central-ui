@@ -8,7 +8,7 @@
             </span>
             <span class="c-b">Pharmacie Ubuzima</span> .
         </h1>
-        <input class="m-5 p-5 ta-c bdr-5" placeholder="ex: paracetamol, ..." /> <br>
+        <input v-model="queryset.query" class="m-5 p-5 ta-c bdr-5" placeholder="ex: paracetamol, ..." /> <br>
         <button class="m-5" @click="getFirstPage">Rechercher</button>
         <div class="sen" v-for="(umuti, index) in imiti" :key="index">
           <div class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'">
@@ -92,6 +92,7 @@ const getSpePage = ()=>{}
 const getFirstPage = ()=>{
   // should receive: 
   // number of pages; pageNumber; the results
+  console.log("sending queryset")
   queryset.page = 1;
   sendPostRequest();
 }
