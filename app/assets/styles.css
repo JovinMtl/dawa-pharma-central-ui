@@ -36,4 +36,5 @@ body{
 .umuti-ctn{
     background-color: green;
     margin: 5px;
+    border-radius: 5px;
 }
