@@ -9,17 +9,26 @@
             <span class="c-b">Pharmacie Ubuzima</span> .
         </h1>
         <input class="m-5 p-5 ta-c bdr-5" placeholder="ex: paracetamol, ..." /> <br>
-        <button class="m-5" @click="searchF">Rechercher</button>
-        <div class="sen" v-for="umuti in imiti">
-          <div class="umuti-ctn">
-            <div>{{ umuti.nom_med }} </div>
-            <div>
-              <span>{{ umuti.price }}</span>;
+        <button class="m-5" @click="getFirstPage">Rechercher</button>
+        <div class="sen" v-for="(umuti, index) in imiti" :key="index">
+          <div class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'">
+            <div>{{ String(umuti.nom_med).slice(0, 30) }} </div>
+            <div class="c-w">
+              <span>{{ umuti.price }} Fbu</span>;
               <span>{{ umuti.date_per }}</span>
             </div>
             <div>{{ pharmas[umuti.owner]?.name_pharma }} </div>
           </div>
         </div>
+        <section>
+          <div>
+            <label for="">Page</label>
+            <button>Precedent</button>
+            {{queryset.page}}/{{ queryset.maxPage }}
+            <button>Suivant</button>
+
+          </div>
+        </section>
       </div>
     </main>
 </template>
@@ -27,12 +36,19 @@
 <script setup lang="ts">
 const showLoader = ref(false)
 const pharmas = ref({})
+const queryset = reactive({
+  'page': 1,
+  'query': '',
+  'maxPage': 1,
+})
 
 const url_get_pharmas = 'api/gOps/get_pharmas/'
 const [responsePharmas, getPharmas] =useGetRequest(url_get_pharmas)
 
 getPharmas()
-// const [responsePost, sendPostRequest] = usePostRequest()
+
+const url_post_query = 'api/gOps/search_meds_public/'
+const [responsePost, sendPostRequest] = usePostRequest(url_post_query, queryset)
 
 const imiti = ref([
   {
@@ -72,6 +88,23 @@ useHead({
 })
 
 // Functions
+const getSpePage = ()=>{}
+const getFirstPage = ()=>{
+  // should receive: 
+  // number of pages; pageNumber; the results
+  queryset.page = 1;
+  sendPostRequest();
+}
+const getPrevPage = ()=>{
+  if(queryset.page >= 2){
+    queryset.page -= 1;
+    sendPostRequest();
+  }
+}
+const getNextPage = ()=>{
+  queryset.page += 1;
+  sendPostRequest()
+}
 const searchF = ()=>{
   showLoader.value = true;
   setTimeout(()=>{

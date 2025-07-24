@@ -32,9 +32,20 @@ body{
 .c-b{
     color: blue;
 }
+.c-w{
+    color: wheat;
+}
+.bg-g1{
+    background-color: rgb(59, 153, 59);
+}
+.bg-g2{
+    background-color: rgb(153, 136, 59);
+}
+.bg-g2{
+    background-color: rgb(59, 115, 153);
+}
 
 .umuti-ctn{
-    background-color: green;
     margin: 5px;
     border-radius: 5px;
 }
