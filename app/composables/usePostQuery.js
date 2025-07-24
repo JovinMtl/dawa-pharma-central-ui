@@ -1,9 +1,10 @@
 
 import { ref } from 'vue'
 
-data = ref(null)
+
 
 export const usePostRequest = (url, dataToSend)=>{
+    const data = ref(null)
     const makePost = async ()=>{
         try{
             const responsePost = await fetch(url, {
@@ -11,8 +12,9 @@ export const usePostRequest = (url, dataToSend)=>{
                 'headers': 'json/application',
                 'body': JSON.stringify(dataToSend)
             })
+            data.value = await responsePost.json()
             if (responsePost.ok){
-                data.value = responsePost.json()
+                
             }
         }catch{
             console.log("Error happened in Get request.")
