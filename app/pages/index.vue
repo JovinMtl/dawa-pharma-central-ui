@@ -10,14 +10,14 @@
         </h1>
         <input class="m-5 p-5 ta-c bdr-5" placeholder="ex: paracetamol, ..." /> <br>
         <button class="m-5" @click="searchF">Rechercher</button>
-        <div v-for="umuti in imiti">
+        <div class="sen" v-for="umuti in imiti">
           <div class="umuti-ctn">
             <div>{{ umuti.nom_med }} </div>
             <div>
               <span>{{ umuti.price }}</span>;
               <span>{{ umuti.date_per }}</span>
             </div>
-            <div>{{ umuti.owner }} </div>
+            <div>{{ pharmas[umuti.owner]?.name_pharma }} </div>
           </div>
         </div>
       </div>
