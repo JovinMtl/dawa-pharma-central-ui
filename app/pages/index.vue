@@ -24,8 +24,8 @@
           <div>
             <label for="">Page</label>
             <button>Precedent</button>
-            {{queryset.page}}/{{ queryset.maxPage }}
-            <button>Suivant</button>
+            {{page}}/{{ maxPage }}
+            <button @click="getNextPage">Suivant</button>
 
           </div>
         </section>
@@ -39,8 +39,9 @@ const pharmas = ref({})
 const queryset = reactive({
   'page': 1,
   'query': '',
-  'maxPage': 1,
 })
+const page = ref(1)
+const maxPage = ref(1)
 
 const url_get_pharmas = 'api/gOps/get_pharmas/'
 const [responsePharmas, getPharmas] =useGetRequest(url_get_pharmas)
@@ -48,27 +49,16 @@ const [responsePharmas, getPharmas] =useGetRequest(url_get_pharmas)
 getPharmas()
 
 const url_post_query = 'api/gOps/search_meds_public/'
-const [responsePost, sendPostRequest] = usePostRequest(url_post_query, queryset)
+const [responseQuery, sendPostRequest] = usePostRequest(url_post_query, queryset)
 
 const imiti = ref([
   {
-    'nom_med': 'meddjfajdfkljalfjdkfjs1',
-    'price': 1800,
+    'nom_med': 'nom du medicament',
+    'price': 0,
     'owner': 1,
     'date_per': "2028"
   },
-  {
-    'nom_med': 'medmeddjfajdfkljalfjdkfjs2',
-    'price': 2800,
-    'owner': 1,
-    'date_per': "2028"
-  },
-  {
-    'nom_med': 'medmeddjfajdfkljalfjdkfjs3',
-    'price': 1200,
-    'owner': 1,
-    'date_per': "2028"
-  },
+  
 ])
 
 useHead({
@@ -114,6 +104,13 @@ const searchF = ()=>{
 }
 
 //Watchers
+watch(responseQuery, (value)=>{
+  if(value?.response){
+    imiti.value = value?.response;
+    page.value = value?.page;
+    maxPage.value = value?.max_page;
+  }
+})
 watch(responsePharmas, (value)=>{
   console.log("There is a change regarding pharmas: " 
       + JSON.stringify(value))
