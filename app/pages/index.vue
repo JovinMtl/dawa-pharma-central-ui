@@ -29,7 +29,7 @@
         <section>
           <div>
             <label for="">Page</label>
-            <button>Precedent</button>
+            <button @click="getPrevPage">Precedent</button>
             {{page}}/{{ maxPage }}
             <button @click="getNextPage">Suivant</button>
 
