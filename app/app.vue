@@ -3,7 +3,7 @@
     <NuxtPage />
     <footer>
       <div class="ta-c sen">Pharmacie Ubuzima</div>
-      <div class="ta-c sen">©{{ year }}, Developé par 
+      <div class="ta-c sen sm-l">©{{ year }}, Développé par 
         <a href="https://nsanzumukiza.netlify.app/" target="_blank"  rel="noopener noreferrer" >
           NSANZUMUKIZA
         </a>Thierry.
