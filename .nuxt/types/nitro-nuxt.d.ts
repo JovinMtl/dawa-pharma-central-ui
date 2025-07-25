@@ -1,5 +1,5 @@
 
-
+/// <reference path="nitro-middleware.d.ts" />
 /// <reference path="./runtime-config.d.ts" />
 
 import type { RuntimeConfig } from 'nuxt/schema'

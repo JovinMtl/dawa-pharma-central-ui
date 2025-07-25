@@ -111,9 +111,14 @@ const getPrevPage = ()=>{
   }
 }
 const getNextPage = ()=>{
-  showLoader.value = true;
-  queryset.page += 1;
-  sendPostRequest()
+  if (page.value < maxPage.value){
+    showLoader.value = true;
+    queryset.page += 1;
+    sendPostRequest()
+  } else{
+    return
+  }
+  
 }
 const searchF = ()=>{
   showLoader.value = true;
