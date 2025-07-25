@@ -29,9 +29,9 @@
         <section>
           <div>
             <label for="">Page</label>
-            <button @click="getPrevPage">Precedent</button>
+            <button @click="getPrevPage">Précédente</button>
             {{page}}/{{ maxPage }}
-            <button @click="getNextPage">Suivant</button>
+            <button @click="getNextPage">Suivante</button>
 
           </div>
         </section>
@@ -63,7 +63,7 @@ const [responseQuery, sendPostRequest] = usePostRequest(url_post_query, queryset
 
 const imiti = ref([
   {
-    'nom_med': 'nom du medicament',
+    'nom_med': 'nom du médicament',
     'price': 0,
     'owner': 1,
     'date_per': "2028"
