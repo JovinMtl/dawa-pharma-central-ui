@@ -112,6 +112,7 @@ const getPrevPage = ()=>{
     if (cachedResults[queryset.page]){
       imiti.value = cachedResults[queryset.page];
       console.log("already cached : " + JSON.stringify(cachedResults))
+      page.value = queryset.page;
       return
     }
     showLoader.value = true;
@@ -123,6 +124,7 @@ const getNextPage = ()=>{
     queryset.page += 1;
     if (cachedResults[queryset.page]){
       imiti.value = cachedResults[queryset.page];
+      page.value = queryset.page;
       return
     }
     showLoader.value = true;
