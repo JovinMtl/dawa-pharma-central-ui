@@ -88,11 +88,8 @@ useHead({
 })
 
 // Functions
-const getSpePage = ()=>{}
+// const getSpePage = ()=>{}
 const getFirstPage = ()=>{
-  // should receive: 
-  // number of pages; pageNumber; the results
-
   if (String(queryset.query).length < 3){
     shortQuery.value = true;
     setTimeout(()=>{
@@ -102,7 +99,6 @@ const getFirstPage = ()=>{
   }
   cachedResults.value = {}
   showLoader.value = true;
-  console.log("sending queryset")
   queryset.page = 1;
   sendPostRequest();
 }
@@ -111,7 +107,6 @@ const getPrevPage = ()=>{
     queryset.page -= 1;
     if (cachedResults[queryset.page]){
       imiti.value = cachedResults[queryset.page];
-      console.log("already cached : " + JSON.stringify(cachedResults))
       page.value = queryset.page;
       return
     }
@@ -146,8 +141,6 @@ watch(responseQuery, (value)=>{
   }
 })
 watch(responsePharmas, (value)=>{
-  console.log("There is a change regarding pharmas: " 
-      + JSON.stringify(value))
   pharmas.value = value?.response;
 })
 </script>
