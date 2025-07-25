@@ -49,6 +49,9 @@ const queryset = reactive({
 const page = ref(1)
 const maxPage = ref(1)
 const shortQuery = ref(false)
+const cachedResults = reactive({
+  0: null,
+})
 
 const url_get_pharmas = 'api/gOps/get_pharmas/'
 const [responsePharmas, getPharmas] =useGetRequest(url_get_pharmas)
@@ -97,7 +100,7 @@ const getFirstPage = ()=>{
     }, 3000)
     return
   }
-
+  cachedResults.value = {}
   showLoader.value = true;
   console.log("sending queryset")
   queryset.page = 1;
@@ -105,34 +108,38 @@ const getFirstPage = ()=>{
 }
 const getPrevPage = ()=>{
   if(queryset.page >= 2){
-    showLoader.value = true;
     queryset.page -= 1;
+    if (cachedResults[queryset.page]){
+      imiti.value = cachedResults[queryset.page];
+      console.log("already cached : " + JSON.stringify(cachedResults))
+      return
+    }
+    showLoader.value = true;
     sendPostRequest();
   }
 }
 const getNextPage = ()=>{
   if (page.value < maxPage.value){
-    showLoader.value = true;
     queryset.page += 1;
+    if (cachedResults[queryset.page]){
+      imiti.value = cachedResults[queryset.page];
+      return
+    }
+    showLoader.value = true;
     sendPostRequest()
   } else{
     return
   }
   
 }
-const searchF = ()=>{
-  showLoader.value = true;
-  setTimeout(()=>{
-    showLoader.value = false
-  }, 3000)
-}
 
 //Watchers
 watch(responseQuery, (value)=>{
   if(value?.response){
-    showLoader.value = false;
-    imiti.value = value?.response;
     page.value = value?.page;
+    showLoader.value = false;
+    cachedResults[page.value] = value?.response;
+    imiti.value = value?.response;
     maxPage.value = value?.max_page;
   }
 })
