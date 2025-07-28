@@ -62,7 +62,7 @@ body{
     margin: 12px 0;
     padding: 4px 0;
     border-radius: 28px;
-    line-height: 1.5rem;
+    /* line-height: 1.5rem; */
 }
 .sen{
     font-family: Sen;
