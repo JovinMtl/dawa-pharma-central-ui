@@ -164,6 +164,7 @@ watch(responsePharmas, (value)=>{
   height: 95vh;
   padding: 5px;
   /* overflow: auto; */
+  overflow-y: auto;
 }
 .color-title{
     background: linear-gradient(to right, rgb(0, 128, 107),rgb(11, 102, 11));
