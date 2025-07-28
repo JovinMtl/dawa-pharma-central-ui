@@ -2,8 +2,10 @@
   <div class="muteBg">
     <NuxtPage />
     <footer>
-      <div class="ta-c sen">Pharmacie Ubuzima</div>
-      <div class="ta-c sen sm-l">©{{ year }}, Développé par 
+      <!-- <div class="ta-c sen">Pharmacie Ubuzima</div> -->
+      <div class="ta-c sen sm-l bg-foo">
+        Pharmacie Ubuzima <br>
+        ©{{ year }}, Développé par 
         <a href="https://nsanzumukiza.netlify.app/" target="_blank"  rel="noopener noreferrer" >
           NSANZUMUKIZA
         </a>Thierry.
@@ -27,5 +29,8 @@ const year:string = (String(new Date())).slice(11, 15);
 }
 a{
   text-decoration: none;
+}
+footer{
+  overflow: auto;
 }
 </style>

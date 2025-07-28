@@ -85,3 +85,9 @@ button{
 input{
     font-size: larger;
 }
+.bg-foo{
+    width: 100%;
+    position: absolute;
+    background-color: rgb(41, 148, 134);
+    z-index: 5;
+}

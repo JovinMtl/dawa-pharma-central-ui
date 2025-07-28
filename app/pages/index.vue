@@ -26,8 +26,10 @@
             <div>
               {{ pharmas[umuti.owner]?.name_pharma }} 
               <span>({{ useFormatDate(pharmas[umuti.owner]?.last_connected) }}). 
-                <span class="btn">Voir plus</span>
               </span>
+            </div>
+            <div class="btn">
+              Voir plus
             </div>
           </div>
         </div>
