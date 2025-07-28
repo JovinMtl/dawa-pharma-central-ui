@@ -1,4 +1,7 @@
-
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     background-color: rgb(41, 148, 134);
     /* background-color: rgb(25, 138, 182); */
@@ -38,20 +41,44 @@ body{
 .sm-l{
     size: 0.8rem;
 }
+.c-g1{
+    color: rgb(59, 153, 59);
+}
+
 .bg-g1{
-    background-color: rgb(59, 153, 59);
+    background-color: rgb(59, 153, 140);
 }
 .bg-g2{
-    background-color: rgb(153, 136, 59);
+    background-color: rgb(99, 116, 128);
 }
-.bg-g2{
-    background-color: rgb(59, 115, 153);
+.c-g2{
+    color: rgb(59, 115, 153);
+}
+.sz-b{
+    size: 3rem;
 }
 
 .umuti-ctn{
-    margin: 5px;
-    border-radius: 5px;
+    margin: 12px 0;
+    padding: 4px 0;
+    border-radius: 28px;
+    line-height: 1.5rem;
 }
 .sen{
     font-family: Sen;
+}
+.inp-elm, .bdr-24{
+    border-radius: 24px;
+    padding: 12px;
+    margin: 8px 0;
+}
+.btn{
+    text-decoration: underline dashed white;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+button{
+    border-radius: 12px;
+    padding: 4px 8px;
+    margin: 1rem 4px;
 }

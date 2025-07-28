@@ -1,5 +1,5 @@
 <template>
-    <main class="pge-setup fl fl-c p-5">
+    <main class="pge-setup fl fl-c p-5" style="margin: 0; padding: 0;">
       <jove-loader v-if="showLoader"></jove-loader>
       <div class="ta-c pge-2-set">
         <h1 class="sen ">
@@ -7,23 +7,28 @@
                 Trouver le médicament disponible dans la 
             </span>
             <span class="c-b">Pharmacie Ubuzima</span> .
-        </h1>
+        </h1><br>
         
         <form v-on:submit.prevent>
-          <input v-model="queryset.query" class="m-5 p-5 ta-c bdr-5" placeholder="ex: paracetamol, ..." /> 
+          <input v-model="queryset.query" class="m-5 p-5 ta-c bdr-5 inp-elm" placeholder="ex: paracetamol, ..." /> 
         <span v-show="shortQuery" for="" class="c-r sm-l">Tapez au moins trois lettres</span>
         <br>
-          <button type="submit" class="m-5" @click="getFirstPage">Rechercher</button>
+          <button type="submit" class="m-" @click="getFirstPage">Rechercher</button>
         </form>
         
         <div class="sen" v-for="(umuti, index) in imiti" :key="index">
           <div class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'">
-            <div>{{ String(umuti.nom_med).slice(0, 30) }} </div>
+            <div>💊{{ String(umuti.nom_med).slice(0, 30) }} </div>
             <div class="c-w">
               <span>{{ umuti.price }} Fbu</span>;
-              <span>{{ umuti.date_per }}</span>
+              <span>jusqu'au {{ umuti.date_per }}</span>
             </div>
-            <div>{{ pharmas[umuti.owner]?.name_pharma }} </div>
+            <div>
+              {{ pharmas[umuti.owner]?.name_pharma }} 
+              <span>({{ useFormatDate(pharmas[umuti.owner]?.last_connected) }}). 
+                <span class="btn">Voir plus</span>
+              </span>
+            </div>
           </div>
         </div>
         <section>
@@ -78,6 +83,10 @@ useHead({
     {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap'
+    },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap'
     }
   ],
   title: 'Pharmacie Ubuzima - Recherchez les médicaments disponibles - Kamenge, Bujumbura, Burundi',
@@ -148,11 +157,13 @@ watch(responsePharmas, (value)=>{
 .pge-setup{
   width: 100%;
   height: 95vh;
+  margin: 0;
 }
 .pge-2-set{
   width: 100%;
   height: 95vh;
   padding: 5px;
+  overflow: auto;
 }
 .color-title{
     background: linear-gradient(to right, rgb(0, 128, 107),rgb(11, 102, 11));

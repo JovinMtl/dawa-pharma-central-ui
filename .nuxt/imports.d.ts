@@ -30,6 +30,7 @@ export { requestIdleCallback, cancelIdleCallback } from '#app/compat/idle-callba
 export { setInterval } from '#app/compat/interval';
 export { defineLazyHydrationComponent } from '#app/composables/lazy-hydration';
 export { remoteURL } from '../app/composables/urlHost';
+export { useFormatDate } from '../app/composables/useFormatDate';
 export { useGetRequest } from '../app/composables/useGetRequest';
 export { usePostRequest } from '../app/composables/usePostQuery';
 export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';

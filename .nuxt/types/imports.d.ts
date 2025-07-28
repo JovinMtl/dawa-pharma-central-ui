@@ -104,6 +104,7 @@ declare global {
   const useCssVars: typeof import('vue')['useCssVars']
   const useError: typeof import('../../node_modules/nuxt/dist/app/composables/error')['useError']
   const useFetch: typeof import('../../node_modules/nuxt/dist/app/composables/fetch')['useFetch']
+  const useFormatDate: typeof import('../../app/composables/useFormatDate')['useFormatDate']
   const useGetRequest: typeof import('../../app/composables/useGetRequest')['useGetRequest']
   const useHead: typeof import('../../node_modules/nuxt/dist/app/composables/head')['useHead']
   const useHeadSafe: typeof import('../../node_modules/nuxt/dist/app/composables/head')['useHeadSafe']
@@ -290,6 +291,7 @@ declare module 'vue' {
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
     readonly useError: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/error')['useError']>
     readonly useFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/fetch')['useFetch']>
+    readonly useFormatDate: UnwrapRef<typeof import('../../app/composables/useFormatDate')['useFormatDate']>
     readonly useGetRequest: UnwrapRef<typeof import('../../app/composables/useGetRequest')['useGetRequest']>
     readonly useHead: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/head')['useHead']>
     readonly useHeadSafe: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/head')['useHeadSafe']>
