@@ -25,7 +25,9 @@
             </div>
             <div>
               {{ pharmas[umuti.owner]?.name_pharma }} 
-              <span>({{ useFormatDate(pharmas[umuti.owner]?.last_connected) }}). 
+              <!-- <span>({{ useFormatDate(pharmas[umuti.owner]?.last_connected) }}). 
+              </span> -->
+              <span>({{ useTellTime(pharmas[umuti.owner]?.last_connected) }}). 
               </span>
             </div>
             <div class="btn">
@@ -47,6 +49,8 @@
 </template>
 
 <script setup lang="ts">
+import { useTellTime } from '~/composables/useTellTime'
+
 const showLoader = ref(false)
 const pharmas = ref({})
 const queryset = reactive({
