@@ -1,6 +1,7 @@
 <template>
     <main class="pge-setup fl fl-c p-5" style="margin: 0; padding: 0;">
       <jove-loader v-if="showLoader"></jove-loader>
+      <detailsPharma></detailsPharma>
       <div class="ta-c pge-2-set">
         <h1 class="sen ">
             <span class="color-title">
@@ -41,7 +42,6 @@
             <button @click="getPrevPage">Précédente</button>
             {{page}}/{{ maxPage }}
             <button @click="getNextPage">Suivante</button>
-
           </div>
         </section>
       </div>
@@ -63,6 +63,7 @@ const shortQuery = ref(false)
 const cachedResults = reactive({
   0: null,
 })
+const showDetails = ref(false)
 
 const url_get_pharmas = 'api/gOps/get_pharmas/'
 const [responsePharmas, getPharmas] =useGetRequest(url_get_pharmas)
