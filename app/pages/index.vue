@@ -162,12 +162,12 @@ watch(responsePharmas, (value)=>{
 <style scoped>
 .pge-setup{
   width: 100%;
-  height: 95vh;
+  height: 94vh;
   margin: 0;
 }
 .pge-2-set{
   width: 100%;
-  height: 95vh;
+  height: 94vh;
   padding: 5px;
   /* overflow: auto; */
   overflow-y: auto;
