@@ -30,16 +30,23 @@
                     </tr>
                 </table>
             </div>
-            <div class="ft">
+            <div class="ft" @click="closeDetails">
                 <button>Ok</button>
             </div>
         </div>
     </div>
 </template>
+<script setup lang="ts">
+const emits = defineEmits(['close'])
+
+const closeDetails = ()=>{
+    emits('close')
+}
+</script>
 <style scoped>
 .bdy{
     width: 100%;
-    height: 92%;
+    height: 90%;
     line-height: 1.8rem;
 }
 .ft{

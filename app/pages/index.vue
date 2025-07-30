@@ -1,7 +1,7 @@
 <template>
     <main class="pge-setup fl fl-c p-5" style="margin: 0; padding: 0;">
       <jove-loader v-if="showLoader"></jove-loader>
-      <detailsPharma></detailsPharma>
+      <detailsPharma v-if="showDetails" @close="turnOffDetails"></detailsPharma>
       <div class="ta-c pge-2-set">
         <h1 class="sen ">
             <span class="color-title">
@@ -18,7 +18,7 @@
         </form>
         
         <div class="sen" v-for="(umuti, index) in imiti" :key="index">
-          <div class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'">
+          <div class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'"  @click="turnOnDetails">
             <div>💊{{ String(umuti.nom_med).slice(0, 30) }} </div>
             <div class="c-w">
               <span>{{ umuti.price }} Fbu</span>;
@@ -104,6 +104,12 @@ useHead({
 })
 
 // Functions
+const turnOffDetails = ()=>{
+  showDetails.value = false;
+}
+const turnOnDetails = ()=>{
+  showDetails.value = true;
+}
 // const getSpePage = ()=>{}
 const getFirstPage = ()=>{
   if (String(queryset.query).length < 3){
