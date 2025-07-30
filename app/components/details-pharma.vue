@@ -60,8 +60,8 @@
     align-content: center;
 }
 .detailContn{
-    width: 300px;
-    height: 450px;
+    max-width: 300px;
+    max-height: 450px;
     background-color: white;
     position: relative;
     /* padding: 10px; */
