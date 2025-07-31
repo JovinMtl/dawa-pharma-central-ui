@@ -10,12 +10,22 @@
                         </b>
                     </caption>
                     <tr>
-                        <td class="ta-r">Prix</td>
-                        <td>{{ useReadableNumber(med?.price) }} Fbu</td>
+                        <td class="ta-r">
+                            Prix
+                            <span class="c-w">_</span>
+                        </td>
+                        <td>
+                            <span class="c-w">_</span>
+                            {{ useReadableNumber(med?.price) }} Fbu
+                        </td>
                     </tr>
                     <tr>
-                        <td class="ta-r">Validité</td>
+                        <td class="ta-r">
+                            Validité
+                            <span class="c-w">_</span>
+                        </td>
                         <td>
+                            <span class="c-w">_</span>
                             {{ useRemoveBracket(med?.date_per) }}
                         </td>
                     </tr>
@@ -24,9 +34,14 @@
                         <td>{{ pharma?.name_pharma }}</td>
                     </tr>
                     <tr>
-                        <td class="ta-r">Addresse</td>
+                        <td class="ta-r">
+                            Addresse
+                            <span class="c-w">_</span>
+                        </td>
                         <td>
+                            <span class="c-w">_</span>
                             {{ pharma?.loc_street }}, {{ pharma?.loc_quarter }} <br>
+                            <span class="c-w">_</span>
                             {{ pharma?.loc_commune }} / {{ pharma?.loc_Province }}
                         </td>
                     </tr>
@@ -35,17 +50,26 @@
                         <td>map google</td>
                     </tr> -->
                     <tr>
-                        <td class="ta-r">contact</td>
-                        <td>{{ pharma?.tel }}</td>
+                        <td class="ta-r">
+                            contact
+                            <span class="c-w">_</span>
+                        </td>
+                        <td><span class="c-w">_</span>{{ pharma?.tel }}</td>
                     </tr>
                     <tr>
-                        <td class="ta-r">il ya</td>
-                        <td>{{ useTellTime(pharma?.last_connected) }}</td>
+                        <td class="ta-r">il ya
+                            <span class="c-w">_</span>
+                        </td>
+                        <td>
+                            <span class="c-w">_</span>
+                            {{ useTellTime(pharma?.last_connected) }}</td>
                     </tr>
                 </table>
             </div>
             <div class="ft" @click="closeDetails">
-                <button>Ok</button>
+                <button>
+                    Ok
+                </button>
             </div>
         </div>
     </div>
@@ -53,9 +77,6 @@
 <script setup lang="ts">
 const props = defineProps(['med', 'pharma'])
 const emits = defineEmits(['close'])
-
-console.log("theMed: " + JSON.stringify(props.med))
-console.log("thePharma: " + JSON.stringify(props.pharma))
 
 const closeDetails = ()=>{
     emits('close')
@@ -91,10 +112,9 @@ const closeDetails = ()=>{
     position: relative;
     border: 4px solid grey;
     border-radius: 12px;
-    /* color: grey; */
-    /* padding: 10px; */
 }
 .ta-r{
     text-align: right;
+    border-right: 1px solid black;
 }
 </style>

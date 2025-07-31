@@ -10,13 +10,13 @@ export const useTellTime = (strDate)=>{
     const mins = diff.getMinutes()
 
     if (day == 1){
-        strDate = `il ya ${day}jour` 
+        strDate = `${day}jour` 
     } else if (day > 1){
-        strDate = `il ya ${day}jours` 
+        strDate = `${day}jours` 
     } else if (hours){
-        strDate = `il ya ${hours}h` 
+        strDate = `${hours}h` 
     } else if (hours==0 && mins){
-        strDate = `il ya ${mins}min` 
+        strDate = `${mins}min` 
     }
 
     return strDate
