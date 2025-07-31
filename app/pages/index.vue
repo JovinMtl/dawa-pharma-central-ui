@@ -64,6 +64,8 @@ const cachedResults = reactive({
   0: null,
 })
 const showDetails = ref(false)
+const theMed = ref({})
+const thePharma = ref({})
 
 const url_get_pharmas = 'api/gOps/get_pharmas/'
 const [responsePharmas, getPharmas] =useGetRequest(url_get_pharmas)
@@ -110,6 +112,11 @@ const turnOffDetails = ()=>{
 const turnOnDetails = (e:Event)=>{
   const index = Number(e.target.getAttribute('data-id'))
   console.log("The index is : " + JSON.stringify(index))
+  theMed.value = imiti.value[index]
+  thePharma.value = pharmas.value[theMed.value['owner']]
+
+  console.log("THe med: " + JSON.stringify(theMed.value))
+  console.log("ThePharma: " + JSON.stringify(thePharma.value))
   showDetails.value = true;
 }
 // const getSpePage = ()=>{}
