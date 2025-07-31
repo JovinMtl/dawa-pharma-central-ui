@@ -12,20 +12,20 @@
                     <tr>
                         <td class="ta-r">
                             Prix
-                            <span class="c-w">_</span>
+                            <span class="c-t">_</span>
                         </td>
                         <td>
-                            <span class="c-w">_</span>
+                            <span class="c-t">_</span>
                             {{ useReadableNumber(med?.price) }} Fbu
                         </td>
                     </tr>
                     <tr>
                         <td class="ta-r">
                             Validité
-                            <span class="c-w">_</span>
+                            <span class="c-t">_</span>
                         </td>
                         <td>
-                            <span class="c-w">_</span>
+                            <span class="c-t">_</span>
                             {{ useRemoveBracket(med?.date_per) }}
                         </td>
                     </tr>
@@ -36,12 +36,12 @@
                     <tr>
                         <td class="ta-r">
                             Addresse
-                            <span class="c-w">_</span>
+                            <span class="c-t">_</span>
                         </td>
                         <td>
-                            <span class="c-w">_</span>
+                            <span class="c-t">_</span>
                             {{ pharma?.loc_street }}, {{ pharma?.loc_quarter }} <br>
-                            <span class="c-w">_</span>
+                            <span class="c-t">_</span>
                             {{ pharma?.loc_commune }} / {{ pharma?.loc_Province }}
                         </td>
                     </tr>
@@ -52,16 +52,16 @@
                     <tr>
                         <td class="ta-r">
                             contact
-                            <span class="c-w">_</span>
+                            <span class="c-t">_</span>
                         </td>
-                        <td><span class="c-w">_</span>{{ pharma?.tel }}</td>
+                        <td><span class="c-t">_</span>{{ pharma?.tel }}</td>
                     </tr>
                     <tr>
                         <td class="ta-r">il ya
-                            <span class="c-w">_</span>
+                            <span class="c-t">_</span>
                         </td>
                         <td>
-                            <span class="c-w">_</span>
+                            <span class="c-t">_</span>
                             {{ useTellTime(pharma?.last_connected) }}</td>
                     </tr>
                 </table>
@@ -116,5 +116,8 @@ const closeDetails = ()=>{
 .ta-r{
     text-align: right;
     border-right: 1px solid black;
+}
+.c-t{
+    color: transparent;
 }
 </style>
