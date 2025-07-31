@@ -25,7 +25,7 @@
           <div class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'">
             <div>💊{{ String(umuti.nom_med).slice(0, 30) }} </div>
             <div class="c-w">
-              <span>{{ umuti.price }} Fbu</span>;
+              <span>{{ useReadableNumber(umuti.price) }} Fbu</span>;
               <span>jusqu'au {{ useRemoveBracket(umuti.date_per) }}</span>
             </div>
             <div>

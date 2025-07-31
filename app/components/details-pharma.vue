@@ -6,7 +6,7 @@
                 <table>
                     <tr>
                         <td>Prix</td>
-                        <td>{{med?.price}}</td>
+                        <td>{{ useReadableNumber(med?.price) }} Fbu</td>
                     </tr>
                     <tr>
                         <td>Valide</td>
@@ -17,7 +17,7 @@
                     <tr>
                         <td>Address</td>
                         <td>
-                            {{ pharma?.loc_street }}, {{ pharma?.oc_quarter }} <br>
+                            {{ pharma?.loc_street }}, {{ pharma?.loc_quarter }} <br>
                             {{ pharma?.loc_commune }} / {{ pharma?.loc_Province }}
                         </td>
                     </tr>
