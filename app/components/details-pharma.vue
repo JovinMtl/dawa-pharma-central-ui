@@ -89,7 +89,7 @@ const closeDetails = ()=>{
     max-height: 450px;
     background-color: white;
     position: relative;
-    border: 2px solid grey;
+    border: 4px solid grey;
     border-radius: 12px;
     /* color: grey; */
     /* padding: 10px; */
