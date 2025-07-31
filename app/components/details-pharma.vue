@@ -1,16 +1,20 @@
 <template>
     <div class="h-det-ctn">
-        <div class="detailContn">
+        <div class="detailContn sen">
             <div class="bdy">
                 <!-- <h1>{{ pharma?.name_pharma }}</h1> -->
                 <table>
-                    <caption>{{ med?.nom_med }}</caption>
+                    <caption>
+                        <b>
+                            {{ med?.nom_med }}
+                        </b>
+                    </caption>
                     <tr>
                         <td>Prix</td>
                         <td>{{ useReadableNumber(med?.price) }} Fbu</td>
                     </tr>
                     <tr>
-                        <td>Valide</td>
+                        <td>Validité</td>
                         <td>
                             {{ useRemoveBracket(med?.date_per) }}
                         </td>
@@ -20,16 +24,16 @@
                         <td>{{ pharma?.name_pharma }}</td>
                     </tr>
                     <tr>
-                        <td>Address</td>
+                        <td>Addresse</td>
                         <td>
                             {{ pharma?.loc_street }}, {{ pharma?.loc_quarter }} <br>
                             {{ pharma?.loc_commune }} / {{ pharma?.loc_Province }}
                         </td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>localisation</td>
                         <td>map google</td>
-                    </tr>
+                    </tr> -->
                     <tr>
                         <td>contact</td>
                         <td>{{ pharma?.tel }}</td>
@@ -85,6 +89,9 @@ const closeDetails = ()=>{
     max-height: 450px;
     background-color: white;
     position: relative;
+    border: 2px solid grey;
+    border-radius: 12px;
+    /* color: grey; */
     /* padding: 10px; */
 }
 </style>
