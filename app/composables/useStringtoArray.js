@@ -1,11 +1,11 @@
 
 
-export const useStringtoArray = (strDate)=>{
+export const useRemoveBracket = (strDate)=>{
     strDate =  "['06-2027']"
-    
-    const one = String(strDate).indexOf('[')
-    const oneOff = String(strDate).slice(0, one)
-    
-    strDate = `${oneOff}`
+
+    strDate = String(strDate).replaceAll("'",'')
+    strDate = String(strDate).replaceAll("[",'')
+    strDate = String(strDate).replaceAll("]",'')
+
     return strDate
 }

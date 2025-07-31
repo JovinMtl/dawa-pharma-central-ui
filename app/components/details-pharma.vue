@@ -10,7 +10,9 @@
                     </tr>
                     <tr>
                         <td>Valide</td>
-                        <td>{{ med?.date_per }}</td>
+                        <td>
+                            {{ useRemoveBracket(med?.date_per) }}
+                        </td>
                     </tr>
                     <tr>
                         <td>Address</td>

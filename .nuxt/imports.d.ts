@@ -33,7 +33,7 @@ export { remoteURL } from '../app/composables/urlHost';
 export { useFormatDate } from '../app/composables/useFormatDate';
 export { useGetRequest } from '../app/composables/useGetRequest';
 export { usePostRequest } from '../app/composables/usePostQuery';
-export { useStringtoArray } from '../app/composables/useStringtoArray';
+export { useRemoveBracket } from '../app/composables/useStringtoArray';
 export { useTellTime } from '../app/composables/useTellTime';
 export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';
