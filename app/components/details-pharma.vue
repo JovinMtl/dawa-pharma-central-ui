@@ -10,11 +10,11 @@
                         </b>
                     </caption>
                     <tr>
-                        <td>Prix</td>
+                        <td class="ta-r">Prix</td>
                         <td>{{ useReadableNumber(med?.price) }} Fbu</td>
                     </tr>
                     <tr>
-                        <td>Validité</td>
+                        <td class="ta-r">Validité</td>
                         <td>
                             {{ useRemoveBracket(med?.date_per) }}
                         </td>
@@ -24,7 +24,7 @@
                         <td>{{ pharma?.name_pharma }}</td>
                     </tr>
                     <tr>
-                        <td>Addresse</td>
+                        <td class="ta-r">Addresse</td>
                         <td>
                             {{ pharma?.loc_street }}, {{ pharma?.loc_quarter }} <br>
                             {{ pharma?.loc_commune }} / {{ pharma?.loc_Province }}
@@ -35,11 +35,11 @@
                         <td>map google</td>
                     </tr> -->
                     <tr>
-                        <td>contact</td>
+                        <td class="ta-r">contact</td>
                         <td>{{ pharma?.tel }}</td>
                     </tr>
                     <tr>
-                        <td>il ya</td>
+                        <td class="ta-r">il ya</td>
                         <td>{{ useTellTime(pharma?.last_connected) }}</td>
                     </tr>
                 </table>
@@ -93,5 +93,8 @@ const closeDetails = ()=>{
     border-radius: 12px;
     /* color: grey; */
     /* padding: 10px; */
+}
+.ta-r{
+    text-align: right;
 }
 </style>
