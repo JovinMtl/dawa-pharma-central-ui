@@ -2,8 +2,9 @@
     <div class="h-det-ctn">
         <div class="detailContn">
             <div class="bdy">
-                <h1>{{ pharma?.name_pharma }}</h1>
+                <!-- <h1>{{ pharma?.name_pharma }}</h1> -->
                 <table>
+                    <caption>{{ med?.nom_med }}</caption>
                     <tr>
                         <td>Prix</td>
                         <td>{{ useReadableNumber(med?.price) }} Fbu</td>
@@ -13,6 +14,10 @@
                         <td>
                             {{ useRemoveBracket(med?.date_per) }}
                         </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>{{ pharma?.name_pharma }}</td>
                     </tr>
                     <tr>
                         <td>Address</td>
