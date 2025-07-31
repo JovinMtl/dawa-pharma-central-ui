@@ -1,7 +1,11 @@
 <template>
     <main class="pge-setup fl fl-c p-5" style="margin: 0; padding: 0;">
       <jove-loader v-if="showLoader"></jove-loader>
-      <detailsPharma v-if="showDetails" @close="turnOffDetails"></detailsPharma>
+      <detailsPharma v-if="showDetails" 
+        @close="turnOffDetails"
+        :med="theMed"
+        :pharma="thePharma">
+      </detailsPharma>
       <div class="ta-c pge-2-set">
         <h1 class="sen ">
             <span class="color-title">
@@ -115,8 +119,8 @@ const turnOnDetails = (e:Event)=>{
   theMed.value = imiti.value[index]
   thePharma.value = pharmas.value[theMed.value['owner']]
 
-  console.log("THe med: " + JSON.stringify(theMed.value))
-  console.log("ThePharma: " + JSON.stringify(thePharma.value))
+  // console.log("THe med: " + JSON.stringify(theMed.value))
+  // console.log("ThePharma: " + JSON.stringify(thePharma.value))
   showDetails.value = true;
 }
 // const getSpePage = ()=>{}

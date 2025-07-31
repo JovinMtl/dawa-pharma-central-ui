@@ -2,19 +2,22 @@
     <div class="h-det-ctn">
         <div class="detailContn">
             <div class="bdy">
-                <h1>PharmacieUbuzima</h1>
+                <h1>{{ pharma?.name_pharma }}</h1>
                 <table>
                     <tr>
                         <td>Prix</td>
-                        <td>1900</td>
+                        <td>{{med?.price}}</td>
                     </tr>
                     <tr>
                         <td>Valide</td>
-                        <td>02-2028</td>
+                        <td>{{ med?.date_per }}</td>
                     </tr>
                     <tr>
                         <td>Address</td>
-                        <td>13av Twinyoni, Kamenge</td>
+                        <td>
+                            {{ pharma?.loc_street }}, {{ pharma?.oc_quarter }} <br>
+                            {{ pharma?.loc_commune }} / {{ pharma?.loc_Province }}
+                        </td>
                     </tr>
                     <tr>
                         <td>localisation</td>
@@ -22,11 +25,11 @@
                     </tr>
                     <tr>
                         <td>contact</td>
-                        <td>930099293</td>
+                        <td>{{ pharma?.tel }}</td>
                     </tr>
                     <tr>
                         <td>il ya</td>
-                        <td>12min</td>
+                        <td>{{ useTellTime(pharma?.last_connected) }}</td>
                     </tr>
                 </table>
             </div>
@@ -37,7 +40,11 @@
     </div>
 </template>
 <script setup lang="ts">
+const props = defineProps(['med', 'pharma'])
 const emits = defineEmits(['close'])
+
+console.log("theMed: " + JSON.stringify(props.med))
+console.log("thePharma: " + JSON.stringify(props.pharma))
 
 const closeDetails = ()=>{
     emits('close')
