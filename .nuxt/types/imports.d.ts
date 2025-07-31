@@ -165,6 +165,7 @@ declare global {
   const useShadowRoot: typeof import('vue')['useShadowRoot']
   const useSlots: typeof import('vue')['useSlots']
   const useState: typeof import('../../node_modules/nuxt/dist/app/composables/state')['useState']
+  const useStringtoArray: typeof import('../../app/composables/useStringtoArray')['useStringtoArray']
   const useTellTime: typeof import('../../app/composables/useTellTime')['useTellTime']
   const useTemplateRef: typeof import('vue')['useTemplateRef']
   const useTransitionState: typeof import('vue')['useTransitionState']
@@ -353,6 +354,7 @@ declare module 'vue' {
     readonly useShadowRoot: UnwrapRef<typeof import('vue')['useShadowRoot']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useState: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/state')['useState']>
+    readonly useStringtoArray: UnwrapRef<typeof import('../../app/composables/useStringtoArray')['useStringtoArray']>
     readonly useTellTime: UnwrapRef<typeof import('../../app/composables/useTellTime')['useTellTime']>
     readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
     readonly useTransitionState: UnwrapRef<typeof import('vue')['useTransitionState']>
