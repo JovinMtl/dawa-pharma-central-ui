@@ -17,8 +17,8 @@
           <button type="submit" class="m-" @click="getFirstPage">Rechercher</button>
         </form>
         
-        <div class="sen" v-for="(umuti, index) in imiti" :key="index">
-          <div class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'"  @click="turnOnDetails">
+        <div class="sen" v-for="(umuti, index) in imiti" :key="index" data-id="index">
+          <div class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'">
             <div>💊{{ String(umuti.nom_med).slice(0, 30) }} </div>
             <div class="c-w">
               <span>{{ umuti.price }} Fbu</span>;
@@ -31,7 +31,7 @@
               <span>({{ useTellTime(pharmas[umuti.owner]?.last_connected) }}). 
               </span>
             </div>
-            <div class="btn">
+            <div class="btn"  :data-id="index"  @click="turnOnDetails">
               Voir plus
             </div>
           </div>
@@ -107,7 +107,9 @@ useHead({
 const turnOffDetails = ()=>{
   showDetails.value = false;
 }
-const turnOnDetails = ()=>{
+const turnOnDetails = (e:Event)=>{
+  const index = Number(e.target.getAttribute('data-id'))
+  console.log("The index is : " + JSON.stringify(index))
   showDetails.value = true;
 }
 // const getSpePage = ()=>{}
