@@ -26,7 +26,7 @@
             <div>💊{{ String(umuti.nom_med).slice(0, 30) }} </div>
             <div class="c-w">
               <span>{{ umuti.price }} Fbu</span>;
-              <span>jusqu'au {{ umuti.date_per }}</span>
+              <span>jusqu'au {{ useRemoveBracket(umuti.date_per) }}</span>
             </div>
             <div>
               {{ pharmas[umuti.owner]?.name_pharma }} 
