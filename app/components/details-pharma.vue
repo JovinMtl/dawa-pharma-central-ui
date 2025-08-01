@@ -82,7 +82,7 @@
             </div>
             <div class="ft" @click="closeDetails">
                 <button>
-                    Ok
+                    Fermer
                 </button>
             </div>
         </div>
@@ -126,6 +126,7 @@ const closeDetails = ()=>{
     position: relative;
     border: 4px solid grey;
     border-radius: 12px;
+    padding: 5px;
 }
 .ta-r{
     text-align: right;
