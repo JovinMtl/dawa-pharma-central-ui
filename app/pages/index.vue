@@ -22,7 +22,7 @@
         </form>
         
         <div class="sen" v-for="(umuti, index) in imiti" :key="index" data-id="index">
-          <div class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'">
+          <div v-show="umuti.price" class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'">
             <div>💊{{ String(umuti.nom_med).slice(0, 30) }} </div>
             <div class="c-w">
               <span>{{ useReadableNumber(umuti.price) }} Fbu</span>;
