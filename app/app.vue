@@ -27,9 +27,6 @@ const year:string = (String(new Date())).slice(11, 15);
     background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
     padding: 0;
 }
-a{
-  text-decoration: none;
-}
 footer{
   overflow: auto;
 }
