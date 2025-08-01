@@ -41,7 +41,7 @@
           </div>
         </div>
         <section>
-          <div>
+          <div v-show="toValue(imiti)?.length > 1">
             <button @click="getPrevPage">Précédente</button>
             {{page}}/{{ maxPage }}
             <button @click="getNextPage">Suivante</button>
