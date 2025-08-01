@@ -56,7 +56,7 @@
                         </td>
                         <td>
                             <span class="c-t">_</span>{{ useReadPhoneNumber(pharma?.tel) }}
-                            <img src="../assets/logo-whatsapp.svg" alt="">
+                            <img class="p-a an" src="../assets/logo-whatsapp.svg" alt="Contact Pharmacie Ubuzima" width="40" height="40">
                         </td>
                     </tr>
                     <tr>
@@ -122,5 +122,21 @@ const closeDetails = ()=>{
 }
 .c-t{
     color: transparent;
+}
+.p-a{
+    position: absolute;
+}
+.an{
+    transform: translate(50%, -20%);
+    animation: gl 800ms 2s 4 forwards;
+}
+
+@keyframes gl {
+    0%, 100%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.1;
+    }
 }
 </style>
