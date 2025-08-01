@@ -33,6 +33,7 @@ export { remoteURL } from '../app/composables/urlHost';
 export { useFormatDate } from '../app/composables/useFormatDate';
 export { useGetRequest } from '../app/composables/useGetRequest';
 export { usePostRequest } from '../app/composables/usePostQuery';
+export { default as useReadPhoneNumber } from '../app/composables/useReadPhoneNumber';
 export { default as useReadableNumber } from '../app/composables/useReadableNumber';
 export { useRemoveBracket } from '../app/composables/useStringtoArray';
 export { useTellTime } from '../app/composables/useTellTime';

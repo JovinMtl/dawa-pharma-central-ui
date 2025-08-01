@@ -120,6 +120,7 @@ declare global {
   const useNuxtDevTools: typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']
   const usePostRequest: typeof import('../../app/composables/usePostQuery')['usePostRequest']
   const usePreviewMode: typeof import('../../node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']
+  const useReadPhoneNumber: typeof import('../../app/composables/useReadPhoneNumber')['default']
   const useReadableNumber: typeof import('../../app/composables/useReadableNumber')['default']
   const useRemoveBracket: typeof import('../../app/composables/useStringtoArray')['useRemoveBracket']
   const useRequestEvent: typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['useRequestEvent']
@@ -310,6 +311,7 @@ declare module 'vue' {
     readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly usePostRequest: UnwrapRef<typeof import('../../app/composables/usePostQuery')['usePostRequest']>
     readonly usePreviewMode: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']>
+    readonly useReadPhoneNumber: UnwrapRef<typeof import('../../app/composables/useReadPhoneNumber')['default']>
     readonly useReadableNumber: UnwrapRef<typeof import('../../app/composables/useReadableNumber')['default']>
     readonly useRemoveBracket: UnwrapRef<typeof import('../../app/composables/useStringtoArray')['useRemoveBracket']>
     readonly useRequestEvent: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['useRequestEvent']>

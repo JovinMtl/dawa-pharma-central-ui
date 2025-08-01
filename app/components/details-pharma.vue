@@ -54,7 +54,10 @@
                             contact
                             <span class="c-t">_</span>
                         </td>
-                        <td><span class="c-t">_</span>{{ pharma?.tel }}</td>
+                        <td>
+                            <span class="c-t">_</span>{{ useReadPhoneNumber(pharma?.tel) }}
+                            <img src="../assets/logo-whatsapp.svg" alt="">
+                        </td>
                     </tr>
                     <tr>
                         <td class="ta-r">il ya
