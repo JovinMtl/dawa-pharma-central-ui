@@ -56,7 +56,7 @@
                         </td>
                         <td>
                             <span class="c-t">_</span>
-                            <a class="link" href="tel:+25779071453" 
+                            <a class="link" href="tel:+25769332288" 
                                 target="_blank"  rel="noopener noreferrer" 
                                 title="Vous pouvez nous appeler.">
                                 {{ useReadPhoneNumber(pharma?.tel) 
