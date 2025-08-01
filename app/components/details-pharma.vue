@@ -16,7 +16,8 @@
                         </td>
                         <td class="c-b">
                             <span class="c-t">_</span>
-                            {{ useReadableNumber(med?.price) }} Fbu
+                            <b>{{ useReadableNumber(med?.price) }}</b>
+                             Fbu
                         </td>
                     </tr>
                     <tr>
@@ -59,8 +60,9 @@
                             <a class="link" href="tel:+25769332288" 
                                 target="_blank"  rel="noopener noreferrer" 
                                 title="Vous pouvez nous appeler.">
-                                {{ useReadPhoneNumber(pharma?.tel) 
-                                }}
+                                <button>
+                                    <b>{{ useReadPhoneNumber(pharma?.tel) }}</b></button>
+                                
                             </a>
                             <!-- <a href="https://nsanzumukiza.netlify.app/" target="_blank"  rel="noopener noreferrer" >
                                 <img class="p-a an" src="../assets/logo-whatsapp.svg" 
@@ -146,6 +148,7 @@ const closeDetails = ()=>{
 .ionicon {
     position: absolute;
     transform: translate(50%, -20%);
+    transform: translate(50%, 20%);
     animation: gl 800ms 2s 4 forwards;
   color: #25D366; /* WhatsApp green */
   width: 40px;
