@@ -28,8 +28,8 @@
               <span v-if="pharmas[umuti.owner]?.name_pharma == 'PharmacieUbuzima'">
                 {{ useReadableNumber(umuti.price) }} Fbu
               </span> 
-              <span class="hide-price bl-2" v-else>
-                {{ String(umuti.price)[0] }}... Fbu
+              <span class="hide-price" v-else>
+                ... Fbu
               </span>;
               <span>jusqu'au {{ useRemoveBracket(umuti.date_per) }}</span>
             </div>
