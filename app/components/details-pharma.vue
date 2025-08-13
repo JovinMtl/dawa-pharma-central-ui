@@ -16,7 +16,13 @@
                         </td>
                         <td class="c-b">
                             <span class="c-t">_</span>
-                            <b>{{ useReadableNumber(med?.price) }}</b>
+                            <span v-if="pharma?.name_pharma == 'PharmacieUbuzima'">
+                                <b>{{ useReadableNumber(med?.price) }}</b>
+                            </span>
+                            <span class="bl-3" v-else>
+                                <b>{{ useReadableNumber(med?.price) }}</b>
+                            </span>
+                            
                              Fbu
                         </td>
                     </tr>
@@ -97,6 +103,9 @@ const closeDetails = ()=>{
 }
 </script>
 <style scoped>
+.bl-3{
+    filter: blur(3px);
+}
 .bdy{
     width: 100%;
     height: 90%;
