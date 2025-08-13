@@ -25,10 +25,10 @@
           <div v-show="umuti.price" class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'">
             <div>💊{{ String(umuti.nom_med).slice(0, 30) }} </div>
             <div class="c-w">
-              <span v-if="pharmas[umuti.owner]?.name_pharma == 'pharmacieUbuzima'">
+              <span v-if="pharmas[umuti.owner]?.name_pharma == 'PharmacieUbuzima'">
                 {{ useReadableNumber(umuti.price) }} Fbu
               </span> 
-              <span>
+              <span class="hide-price" v-else>
                 {{ String(umuti.price)[0] }}... Fbu
               </span>;
               <span>jusqu'au {{ useRemoveBracket(umuti.date_per) }}</span>
@@ -203,5 +203,13 @@ watch(responsePharmas, (value)=>{
 }
 .c-b{
     color: blue;
+}
+.hide-price{
+  /* background: linear-gradient(to right, red, blue); */
+  background-color: black;
+  /* background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  border-radius: 4px;
+  padding-left: 4px;
 }
 </style>
