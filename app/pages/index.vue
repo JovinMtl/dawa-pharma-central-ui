@@ -25,7 +25,12 @@
           <div v-show="umuti.price" class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'">
             <div>💊{{ String(umuti.nom_med).slice(0, 30) }} </div>
             <div class="c-w">
-              <span>{{ useReadableNumber(umuti.price) }} Fbu</span>;
+              <span v-if="pharmas[umuti.owner]?.name_pharma == 'pharmacieUbuzima'">
+                {{ useReadableNumber(umuti.price) }} Fbu
+              </span> 
+              <span>
+                {{ String(umuti.price)[0] }}... Fbu
+              </span>;
               <span>jusqu'au {{ useRemoveBracket(umuti.date_per) }}</span>
             </div>
             <div>
