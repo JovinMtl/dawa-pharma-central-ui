@@ -63,7 +63,7 @@
                         </td>
                         <td>
                             <span class="c-t">_</span>
-                            <a class="link" href="tel:+25769332288" 
+                            <a class="link" :href="'tel:+257' + pharma?.tel" 
                                 target="_blank"  rel="noopener noreferrer" 
                                 title="Vous pouvez nous appeler.">
                                 <button>
