@@ -22,7 +22,7 @@
         </form>
         
         <div class="sen" v-for="(umuti, index) in imiti" :key="index" data-id="index">
-          <div v-show="umuti.price" class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'">
+          <div v-show="umuti.price" class="umuti-ctn" :class="index%2 ? 'bg-g1':'bg-g2'"  :data-id="index"  @click="turnOnDetails">
             <div>💊{{ String(umuti.nom_med).slice(0, 30) }} </div>
             <div class="c-w">
               <span v-if="pharmas[umuti.owner]?.name_pharma == 'PharmacieUbuzima'">
@@ -40,7 +40,7 @@
               <span>(il ya {{ useTellTime(pharmas[umuti.owner]?.last_connected) }}). 
               </span>
             </div>
-            <div class="btn"  :data-id="index"  @click="turnOnDetails">
+            <div class="btn">
               Voir plus
             </div>
           </div>
