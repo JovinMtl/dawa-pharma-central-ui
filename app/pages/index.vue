@@ -118,13 +118,11 @@ const turnOffDetails = ()=>{
   showDetails.value = false;
 }
 const turnOnDetails = (e:Event)=>{
-  const index = Number(e.target.getAttribute('data-id'))
+  const index = Number(e.target.parentNode.getAttribute('data-id'))
   console.log("The index is : " + JSON.stringify(index))
   theMed.value = imiti.value[index]
   thePharma.value = pharmas.value[theMed.value['owner']]
 
-  // console.log("THe med: " + JSON.stringify(theMed.value))
-  // console.log("ThePharma: " + JSON.stringify(thePharma.value))
   showDetails.value = true;
 }
 // const getSpePage = ()=>{}
