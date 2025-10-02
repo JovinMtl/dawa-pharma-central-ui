@@ -25,8 +25,8 @@ It’s designed to make access to healthcare products easier by providing a **fa
 
 **Frontend:**
 
+- [Vue.js](https://vuejs.org/)
 - [Nuxt.js 3](https://nuxt.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
 
 **Backend:**
 
@@ -37,7 +37,3 @@ It’s designed to make access to healthcare products easier by providing a **fa
 
 - Vercel (frontend)
 - Django backend API (cloud/self-hosted)
-
----
-
-## 📂 Project Structure
