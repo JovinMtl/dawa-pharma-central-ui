@@ -118,9 +118,9 @@ useHead({
       href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap'
     }
   ],
-  title: 'Pharmacie Ubuzima - Recherchez les médicaments disponibles - Kamenge, Bujumbura, Burundi',
+  title: 'BaZá kuri Pharmacie 💊',
   meta: [
-    { name: 'description', content: 'Trouvez facilement les médicaments en stock à la Pharmacie Ubuzima. #medicament #sante #Kamenge #Bujumbura #Burundi' },
+    { name: 'description', content: 'Trouver facilement le médicament disponible dans les pharmacies près de Vous - Kamenge, Bujumbura, Burundi' },
     { name: 'robots', content: 'index, follow' },
   ]
 })
