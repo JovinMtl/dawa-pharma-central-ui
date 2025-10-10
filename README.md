@@ -5,7 +5,7 @@
 Ubuzima is a **medical search engine** that helps users quickly find medicines available in multiple pharmacies.  
 It’s designed to make access to healthcare products easier by providing a **fast, accurate, and centralized search** experience.
 
-🔗 **Live Demo**: [https://ubuzima.vercel.app/](https://ubuzima.vercel.app/)  
+🔗 **Live for public use**: [https://ubuzima.vercel.app/](https://ubuzima.vercel.app/)  
 📌 **Indexed on Google**: Already discoverable via public search, with keyword: **pharmacie ubuzima**.
 
 ---
